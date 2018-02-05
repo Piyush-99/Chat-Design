@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="chat.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Single Page Chat</title>
+</head>
+<body id = "color">
+   <center><h4>Single Page Chat Design Made by Piyush Parashar</h4></center>
+   <div class="container panel panel-default">
+	  <div class="col-lg-4 col-xs-4">
+   	     	<form class="form-inline">
+   	     	<input class="form-control" type="text" placeholder="Search"/>
+   	     	<button id="search" class="btn btn-info">Search</button>
+   	        </form>
+   	     	<button id="showall" class="btn btn-success">Show all Chats</button>
+   	     	<ul class="chats">	
+   	     		<li>Aayush</li>
+   	     		<li>Bhavesh</li>
+   	     		<li>Bhavesh</li>
+   	     		<li>Cindy</li>
+   	     		<li>Dhruv</li>
+   	     		<li>Eeshan</li>
+   	     	</ul>
+      </div>
+      <div class="col-lg-8 col-xs-8">
+      		<div id="userimg">
+      			<img src="https://www.vacul.org/extension/site/design/site/images/anonymous-user.png"/>
+                <p> Sample User </p>
+            </div>
+            <div>
+            	User Details
+                <ul>
+        	      <li>Name</li>
+        	      <li>Email</li>
+        	      <li>Query</li>
+                </ul>
+            </div>
+            <div class="chatcontent">
+            	<div class="add"></div>
+            	<div id="fixed">
+            		<input class="form-control" type="text" placeholder="Chat text here">
+            		<button id ="send" class="btn btn-primary">Send</button>
+            	</div>
+            </div>	
+      </div>
+   </div>
+   <script type="text/javascript">
+   	$(document).ready(function() {
+   		
+   		$("#search").click(function(event) {
+   			event.preventDefault();
+   			const val = document.getElementsByTagName('input')[0].value;
+   			if 
+   				($(".chats li:contains("+val+")").length > 0 && (val!="")) 
+   				{
+   			      $(".chats li").hide();
+   		          $(".chats li:contains("+document.getElementsByTagName('input')[0].value+")").show();		
+   				}
+   			else	
+   			{
+   			  $(".chats li").show();	
+   			}
+
+   		});
+
+        $("#showall").click(function(event) {
+        	$(".chats li").show();
+        });
+
+        $("#send").click(function(event) {
+        	const val = document.getElementsByTagName('input')[1].value;
+        	if(val != "") {
+        	$(".add").append('Piyush<h3>'+val+'</h3>').css({
+        		marginTop: "285px"   
+        	});
+        	$("h3").addClass('up');
+        	let x = document.getElementsByClassName('chatcontent')[0];
+            x.scrollTop = x.scrollHeight;
+           }
+        });
+   		 
+
+   	});
+   </script>
+</body>
+</html>

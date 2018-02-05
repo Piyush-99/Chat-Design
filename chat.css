@@ -1,0 +1,71 @@
+#color {
+	background: rgba(102,143,209,0.4);
+}
+h4 {
+	margin-top: 30px;
+}
+.panel-default {
+	margin-top: 40px;
+	padding: 10px;		
+}
+form input {
+	margin: 10px;
+	width: 50%;
+}
+#showall {
+ margin-left: 10px;	
+}
+#userimg {
+	float: left;
+}
+#userimg img {
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	float: left;
+}
+#userimg + div {
+	margin-left: 130px;
+}
+.col-lg-8 .chatcontent {
+	margin-top: 50px;
+	margin-bottom: 40px;
+    border: 1px solid rgba(200,200,200,0.5);
+	border-radius: 5px;
+	height: 330px;
+	overflow-y: scroll;	
+}
+#fixed {
+	position: absolute;
+	top: 93%;
+	bottom: 0px;
+	left: 20px;
+	right: 100px;	
+}
+.add h3 {
+	margin-left: 10px;
+	max-width: 70%;
+	overflow-wrap: break-word;
+	border-radius: 30px;
+}
+#fixed button {
+   position: relative;
+   left: 100%;
+   top: -34px;
+}
+.up {
+	padding: 10px;
+	background-color: rgba(100,100,220,0.2);
+}
+ul {
+	top: 15px;
+	margin: 5px;
+	padding: 0px;
+	list-style: none;
+}
+.chats li {
+	margin: 1px;
+	padding: 20px;
+	border: 1px solid rgba(200,200,200,0.5);
+	border-radius: 5px;
+}
